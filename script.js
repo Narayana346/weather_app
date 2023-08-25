@@ -35,6 +35,15 @@ async function checkWeater(city) {
     }
   }
 }
+document.addEventListener("keydown", (event)=> {
+  // console.log(event)
+  if (event.key === "Enter") {
+      // Check if the Enter key is pressed
+     searchBtn.click(); 
+     // Trigger the button's click event
+  }
+});
+
 searchBtn.addEventListener("click", () => {
   checkWeater(searchBox.value);
 });
